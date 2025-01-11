@@ -44,12 +44,6 @@
             bindings = <&mo>, <&sl>;
         };
 
-        &sl {
-            release-after-ms = <2000>;
-            // ignore-modifiers;
-        };
-
-
         // skq: sticky_key_quick_release {
         //     compatible = "zmk,behavior-sticky-key";
         //     #binding-cells = <1>;
@@ -58,6 +52,11 @@
         //     quick-release;
         //     ignore-modifiers;
         // };
+    };
+
+    &sl {
+        release-after-ms = <2000>;
+        ignore-modifiers;
     };
 
     rgb_encoder: rgb_encoder {
