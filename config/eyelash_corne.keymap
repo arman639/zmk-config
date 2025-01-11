@@ -85,7 +85,7 @@
             display-name = "Fn";
             bindings = <
             &bootloader   &kp F3      &kp F4      &kp F5       &kp F6     &kp F7                                  &mmv MOVE_UP                     &kp KP_MULTIPLY       &kp N7     &kp N8       &kp N9      &kp PLUS          &bootloader
-            &studio_unlock  &kp F2      &kp F10   &kp F11    &kp F12  &kp F8                &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT  &kp F9  &kp N4  &kp N5    &kp N6   &kp BSPC  &kp ESC
+            &studio_unlock  &kp F2      &kp F10   &kp F11    &kp F12  &kp F8                &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT  &kp F9  &mt RALT N4  &mt RSHIFT N5    &mt RCTRL N6   &kp BSPC  &kp ESC
             &sys_reset  &kp F1  &trans      &trans  &trans     &trans  &kp F9                    &mmv MOVE_DOWN                   &kp MINUS       &kp N1     &kp N2  &kp N3  &kp KP_DIVIDE   &kp &sys_reset
                                             &trans      &trans      &trans                                                                   &kp KP_EQUAL       &kp N0     &kp KP_DOT
             >;
