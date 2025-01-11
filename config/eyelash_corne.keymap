@@ -35,12 +35,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-        // oslr: tap_dance_mod_tap {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&mt LSHIFT CAPSLOCK>;
-        // };
         oslr: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -48,15 +42,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&sl>;
         };
-
-        // skq: sticky_key_quick_release {
-        //     compatible = "zmk,behavior-sticky-key";
-        //     #binding-cells = <1>;
-        //     bindings = <&kp>;
-        //     release-after-ms = <1000>;
-        //     quick-release;
-        //     ignore-modifiers;
-        // };
     };
 
 
@@ -115,7 +100,7 @@
             bindings = <
             &bootloader   &kp F3      &kp F4      &kp F5       &kp F6     &kp F7                                  &mmv MOVE_UP                     &kp KP_MULTIPLY       &kp N7     &kp N8       &kp N9      &kp PLUS          &bootloader
             &studio_unlock  &kp F2      &kp F10   &kp F11    &kp F12  &kp F8                &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT  &kp F9  &mt RALT N4  &mt RSHIFT N5    &mt RCTRL N6   &kp BSPC  &kp ESC
-            &sys_reset  &kp F1  &trans      &trans  &trans     &trans  &kp F9                    &mmv MOVE_DOWN                   &kp MINUS       &kp N1     &kp N2  &kp N3  &kp KP_DIVIDE   &kp &sys_reset
+            &sys_reset  &kp F1  &kp LA(LEFT)      &kp LA(RIGHT)  &kp LA(F5)     &trans  &kp F9                    &mmv MOVE_DOWN                   &kp MINUS       &kp N1     &kp N2  &kp N3  &kp KP_DIVIDE   &kp &sys_reset
                                             &trans      &trans      &trans                                                                   &kp KP_EQUAL       &kp N0     &kp KP_DOT
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -136,8 +121,8 @@
             display-name = "OSL R";
             bindings = <
             &trans    &trans  &trans      &trans     &trans  &trans                              &mmv MOVE_UP                &trans        &trans  &trans      &trans    &trans     &trans
-            &trans       &trans  &trans      &trans     &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans        &sk RALT  &sk RSHIFT      &sk RCTRL    &trans  &trans
-            &trans  &trans  &trans     &trans     &trans  &trans       &trans              &mmv MOVE_DOWN              &trans        &trans  &trans  &trans  &trans  &trans
+            &trans       LC(HOME)   &sk RALT  &sk RSHIFT      &sk RCTRL  &trans                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans        &trans  &trans      &trans    &trans  &trans
+            &sk RC(RSHFT)  LC(HOME)  &trans     &trans     &trans  &trans       &trans              &mmv MOVE_DOWN              &trans        &trans  &trans  &trans  &trans  &trans
                                             &trans  &trans  &trans                                              &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
