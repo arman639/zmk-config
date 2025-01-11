@@ -27,6 +27,12 @@
     ignore-modifiers;
 };
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    ignore-modifiers;
+};
+
 / {
     behaviors {
         td0: td0 {
@@ -66,7 +72,7 @@
             bindings = <
             &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T                              &mmv MOVE_UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp TILDE
             &td0       &kp A  &kp S      &kp D     &kp F  &kp G                    &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-            &kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &mmv MOVE_DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+            &kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &mmv MOVE_DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mkp LCLK
                                         &kp LGUI  &mo 1  &lt 3 SPACE                                              &sk RSHIFT  &oslr 2 5  &kp RALT
                                         //&oslr 2 5
             >;
@@ -78,7 +84,7 @@
             bindings = <
             &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                   &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp TILDE
             &kp ESC  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &mmv MOVE_LEFT &mkp LCLK  &mmv MOVE_RIGHT                  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-            &trans  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE      &mkp MB5  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp MINUS   &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+            &trans  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE      &mkp MB5  &trans                    &mmv MOVE_DOWN                           &kp MINUS &kp PLUS &kp EQUAL   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
                                                 &trans     &trans     &kp SPACE                                                            &trans    &kp UNDER     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -89,7 +95,7 @@
             bindings = <
             &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                        &mmv MOVE_UP                     &kp N6           &kp HOME           &kp UP           &kp END           &kp N0    &kp BSPC
             &kp ESC  &bt BT_CLR_ALL   &kp LALT    &kp RSHIFT  &kp LCTRL  &bt BT_SEL 3                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB         &kp LEFT         &kp DOWN           &kp RIGHT        &kp BSPC  &kp PG_UP
-            &trans  &rgb_ug RGB_OFF  &kp K_CUT  &kp K_COPY       &kp K_PASTE        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &kp PG_UP  &kp PG_DN  &kp RET  &kp END   &kp PG_DN
+            &trans  &rgb_ug RGB_OFF  &kp LC(X)  &kp LC(C)       &kp LC(V)        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &kp PG_UP  &kp PG_DN  &kp RET  &kp END   &kp PG_DN
                                                      &trans        &trans        &trans                                                                         &kp INS          &kp DEL          &trans
             >;
             sensor-bindings = <&scroll_encoder>;
