@@ -110,8 +110,8 @@
             display-name = "OSL L";
             bindings = <
             &trans    &trans  &trans      &trans     &trans  &trans                              &mmv MOVE_UP                &trans        &trans  &trans      &trans    &trans     &trans
-            &trans       &trans  &trans      &trans     &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans        &sk RALT  &sk RSHIFT      &sk RCTRL    &trans  &trans
-            &trans  &trans  &trans     &trans     &trans  &trans       &trans              &mmv MOVE_DOWN              &trans        &trans  &trans  &trans  &trans  &trans
+            &trans    &sk LC(HOME)   &sk RALT  &sk RSHIFT      &sk RCTRL  &trans                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans        &trans  &trans      &trans    &trans  &trans
+            &sk RC(RSHFT) &sk LC(END)  &trans     &trans     &trans  &trans       &trans              &mmv MOVE_DOWN              &trans        &trans  &trans  &trans  &trans  &trans
                                             &trans  &trans  &trans                                              &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -121,8 +121,8 @@
             display-name = "OSL R";
             bindings = <
             &trans    &trans  &trans      &trans     &trans  &trans                              &mmv MOVE_UP                &trans        &trans  &trans      &trans    &trans     &trans
-            &trans    &sk LC(HOME)   &sk RALT  &sk RSHIFT      &sk RCTRL  &trans                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans        &trans  &trans      &trans    &trans  &trans
-            &sk RC(RSHFT) &sk LC(HOME)  &trans     &trans     &trans  &trans       &trans              &mmv MOVE_DOWN              &trans        &trans  &trans  &trans  &trans  &trans
+            &trans       &trans  &trans      &trans     &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans        &sk RALT  &sk RSHIFT      &sk RCTRL    &trans  &trans
+            &trans  &trans  &trans     &trans     &trans  &trans       &trans              &mmv MOVE_DOWN              &trans        &trans  &trans  &trans  &trans  &trans
                                             &trans  &trans  &trans                                              &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
