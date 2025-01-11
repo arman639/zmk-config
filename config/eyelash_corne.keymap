@@ -22,6 +22,11 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+&sl {
+    release-after-ms = <2000>;
+    ignore-modifiers;
+};
+
 / {
     behaviors {
         td0: td0 {
@@ -54,10 +59,6 @@
         // };
     };
 
-    &sl {
-        release-after-ms = <2000>;
-        ignore-modifiers;
-    };
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
