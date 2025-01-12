@@ -130,7 +130,7 @@
 &trans   &kp N1          &kp N2     &kp N3      &kp N4     &kp N5                                         &mmv MOVE_UP                     &kp N6            &kp HOME   &kp UP     &kp END    &kp DELETE  &kp BSPC
 &kp ESC  &bt BT_CLR_ALL  &kp LALT   &kp RSHIFT  &kp LCTRL  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC    &kp PG_UP
 &trans   &kp LC(Z)       &kp LC(X)  &kp LC(C)   &kp LC(V)  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR   &kp PG_UP  &kp PG_DN  &kp RET    &kp END     &kp PG_DN
-                                    &trans      &trans     &trans                                                                          &lt 2 UNDERSCORE  &kp DEL    &trans
+                                    &trans      &trans     &trans                                                                          &lt 1 UNDERSCORE  &kp DEL    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
