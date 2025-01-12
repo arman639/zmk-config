@@ -81,6 +81,15 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        unlock_combo {
+            bindings = <&to 0>;
+            key-positions = <18 14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -166,6 +175,15 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 
