@@ -103,9 +103,9 @@
         layer_3 {
             display-name = "Fn-Num";
             bindings = <
-            &bootloader   &kp F3      &kp F4      &kp F5       &kp F6     &kp F7                                  &mmv MOVE_UP                     &kp KP_MULTIPLY       &kp KP_N7     &kp KP_N8       &kp KP_N9      &kp PLUS          &bootloader
+            &bootloader   &kp F3      &kp F4      &kp F5       &kp F6     &kp F7                                  &mmv MOVE_UP                     &kp KP_MULTIPLY       &kp KP_N7     &kp KP_N8       &kp KP_N9      &kp MINUS          &bootloader
             &sl 4  &kp F2      &kp F10   &kp F11    &kp F12  &kp F8                &mmv MOVE_LEFT  &mkp LCLK &mmv MOVE_RIGHT  &kp F9  &mt RALT KP_N4  &mt RSHIFT KP_N5    &mt RCTRL KP_N6   &kp BSPC  &kp ESC
-            &sys_reset  &kp F1  &kp LA(LEFT)      &kp LA(RIGHT)  &kp LA(F5)     &trans  &kp F9                    &mmv MOVE_DOWN                   &kp MINUS       &kp KP_N1     &kp KP_N2  &kp KP_N3  &kp KP_DIVIDE   &kp &sys_reset
+            &sys_reset  &kp F1  &kp LA(LEFT)      &kp LA(RIGHT)  &kp LA(F5)     &trans  &kp F9                    &mmv MOVE_DOWN                   &kp PLUS       &kp KP_N1     &kp KP_N2  &kp KP_N3  &kp KP_DIVIDE   &kp &sys_reset
                                             &trans      &trans      &trans                                                                   &kp KP_EQUAL       &kp N0     &kp KP_DOT
             >;
             sensor-bindings = <&scroll_encoder>;
