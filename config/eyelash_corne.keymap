@@ -87,6 +87,13 @@
         unlock_combo {
             bindings = <&to 0>;
             key-positions = <18 14>;
+            layers = <7>;
+        };
+
+        lock_combo {
+            bindings = <&to 7>;
+            key-positions = <18 14>;
+            layers = <0>;
         };
     };
 
@@ -179,10 +186,10 @@
 
         layer_7 {
             bindings = <
-&none  &none  &none  &none  &none  &none                    &none          &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none            &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none            &none          &none  &none  &none  &none  &none  &none
-                        &none  &none  &none                                    &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none         &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
+                     &none  &none  &none                                &none  &none  &none
             >;
         };
     };
