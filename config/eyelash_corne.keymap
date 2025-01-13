@@ -86,13 +86,13 @@
 
         unlock_combo {
             bindings = <&to 0>;
-            key-positions = <18 14>;
+            key-positions = <1 5>;
             layers = <7>;
         };
 
         lock_combo {
             bindings = <&to 7>;
-            key-positions = <18 14>;
+            key-positions = <1 5>;
             layers = <0>;
         };
     };
@@ -139,10 +139,10 @@
         layer_3 {
             display-name = "Fn-Num";
             bindings = <
-&bootloader  &kp F3  &kp F4        &kp F5         &kp F6      &kp F7                            &mmv MOVE_UP                     &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp MINUS      &bootloader
-&sl 4        &kp F2  &kp F10       &kp F11        &kp F12     &kp F8            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F9           &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp BSPC       &sl 5
-&sys_reset   &kp F1  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LA(F5)  &trans  &kp F9                    &mmv MOVE_DOWN                   &kp PLUS         &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE  &sys_reset
-                                   &trans         &trans      &trans                                                             &kp KP_EQUAL     &kp N0     &kp KP_DOT
+&bootloader       &kp F3  &kp F4        &kp F5         &kp F6      &kp F7                            &mmv MOVE_UP                     &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp MINUS      &bootloader
+&kp LEFT_SHIFT    &kp F2  &kp F10       &kp F11        &kp F12     &kp F8            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F9           &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp BSPC       &sl 5
+&kp LEFT_CONTROL  &kp F1  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LA(F5)  &trans  &kp F9                    &mmv MOVE_DOWN                   &kp PLUS         &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE  &sys_reset
+                                        &trans         &trans      &trans                                                             &kp KP_EQUAL     &kp N0     &kp KP_DOT
             >;
 
             sensor-bindings = <&scroll_encoder>;
