@@ -127,10 +127,10 @@
         raise_layer {
             display-name = "NAV";
             bindings = <
-&trans   &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(0,0,99)                                &mmv MOVE_UP                     &trans            &kp HOME   &kp UP     &kp END    &kp DELETE  &trans
-&kp ESC  &bt BT_CLR_ALL   &kp LALT         &kp RSHIFT       &kp LCTRL        &bt BT_SEL 3                                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC    &kp PG_UP
-&trans   &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)        &rgb_ug RGB_EFF                &kp C_MUTE                    &mmv MOVE_DOWN                   &trans            &kp PG_UP  &kp PG_DN  &kp RET    &trans      &kp PG_DN
-                                           &trans           &trans           &trans                                                                                        &lt 1 UNDERSCORE  &kp DEL    &trans
+&trans   &trans          &trans     &trans      &trans     &trans                                         &mmv MOVE_UP                     &trans            &kp HOME   &kp UP     &kp END    &kp DELETE  &trans
+&kp ESC  &bt BT_CLR_ALL  &kp LALT   &kp RSHIFT  &kp LCTRL  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC    &kp PG_UP
+&trans   &kp LC(Z)       &kp LC(X)  &kp LC(C)   &kp LC(V)  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans            &kp PG_UP  &kp PG_DN  &kp RET    &trans      &kp PG_DN
+                                    &trans      &trans     &trans                                                                          &lt 1 UNDERSCORE  &kp DEL    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
