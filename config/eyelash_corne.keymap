@@ -95,6 +95,18 @@
             key-positions = <1 5>;
             layers = <0>;
         };
+
+        numpad_osl_activator {
+            bindings = <&sl 5>;
+            key-positions = <22 26>;
+            layers = <3>;
+        };
+
+        func_osl_activator {
+            bindings = <&sl 4>;
+            key-positions = <14 18>;
+            layers = <3>;
+        };
     };
 
     keymap {
