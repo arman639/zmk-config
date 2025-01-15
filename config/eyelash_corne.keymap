@@ -99,13 +99,13 @@
         numpad_osl_activator {
             bindings = <&sl 5>;
             key-positions = <38 39>;
-            layers = <3>;
+            layers = <3 1>;
         };
 
         func_osl_activator {
             bindings = <&sl 4>;
             key-positions = <30 31>;
-            layers = <3>;
+            layers = <3 1>;
         };
     };
 
