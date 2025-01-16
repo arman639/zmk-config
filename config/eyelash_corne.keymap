@@ -119,6 +119,18 @@
             key-positions = <7 11>;
             layers = <3>;
         };
+
+        reset_left {
+            bindings = <&sys_reset>;
+            key-positions = <29 33>;
+            layers = <3>;
+        };
+
+        reset_right {
+            bindings = <&sys_reset>;
+            key-positions = <36 40>;
+            layers = <3>;
+        };
     };
 
     keymap {
@@ -175,10 +187,10 @@
         osl_l_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans        &trans    &kp PRINTSCREEN  &trans     &kp INSERT                                &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&trans         &kp LC(HOME)  &sk RALT  &sk RSHIFT       &sk RCTRL  &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(END)   &trans    &kp CAPS         &trans     &kp SCROLLLOCK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                       &trans           &trans     &trans                                                                     &trans  &trans          &trans
+&trans         &trans        &trans    &kp PRINTSCREEN  &trans          &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&trans         &kp LC(HOME)  &sk RALT  &sk RSHIFT       &sk RCTRL       &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)  &kp LC(END)   &trans    &kp CAPS         &kp SCROLLLOCK  &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                       &trans           &trans          &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
