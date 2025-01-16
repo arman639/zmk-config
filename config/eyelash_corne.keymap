@@ -110,26 +110,26 @@
 
         boot_left {
             bindings = <&bootloader>;
-            key-positions = <1 5>;
-            layers = <3>;
+            key-positions = <2 4>;
+            layers = <4>;
         };
 
         boot_right {
             bindings = <&bootloader>;
-            key-positions = <7 11>;
-            layers = <3>;
+            key-positions = <8 10>;
+            layers = <5>;
         };
 
         reset_left {
             bindings = <&sys_reset>;
-            key-positions = <29 33>;
-            layers = <3>;
+            key-positions = <30 32>;
+            layers = <4>;
         };
 
         reset_right {
             bindings = <&sys_reset>;
-            key-positions = <36 40>;
-            layers = <3>;
+            key-positions = <39 37>;
+            layers = <5>;
         };
     };
 
