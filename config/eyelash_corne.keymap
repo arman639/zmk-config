@@ -177,7 +177,7 @@
             bindings = <
 &trans            &kp F3  &kp F4        &kp F5         &kp F6      &kp F7                            &mmv MOVE_UP                     &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS   &kp KP_NUMLOCK
 &kp LEFT_SHIFT    &kp F2  &kp F10       &kp F11        &kp F12     &kp F8            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F9           &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp BSPC       &kp KP_CLEAR
-&kp LEFT_CONTROL  &kp F1  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LA(F5)  &kp F9  &trans                    &mmv MOVE_DOWN                   &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE  &trans
+&kp LEFT_CONTROL  &kp F1  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LA(F5)  &kp F9  &trans                    &mmv MOVE_DOWN                   &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE  &kp SCROLLLOCK
                                         &trans         &trans      &trans                                                             &kp KP_EQUAL     &kp N0     &kp KP_DOT
             >;
 
@@ -187,10 +187,10 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans        &trans    &kp PRINTSCREEN  &trans          &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&trans         &kp LC(HOME)  &sk RALT  &sk RSHIFT       &sk RCTRL       &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(END)   &trans    &kp CAPS         &kp SCROLLLOCK  &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                       &trans           &trans          &trans                                                                      &trans  &trans          &trans
+&trans         &trans        &trans    &kp PRINTSCREEN  &trans     &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&trans         &kp LC(HOME)  &sk RALT  &sk RSHIFT       &sk RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)  &kp LC(END)   &trans    &kp CAPS         &trans     &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                       &trans           &trans     &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
