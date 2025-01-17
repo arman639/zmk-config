@@ -43,7 +43,7 @@
             bindings = <&mo>, <&sl>;
         };
 
-        hold_kp_tap_tog: behavior_mo_tog {
+        hold_kp_tap_tog: hold_kp_tap_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_KP_TAP_TOG";
             bindings = <&kp>, <&tog>;
