@@ -66,6 +66,22 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        select_line: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp END>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp HOME>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     rgb_encoder: rgb_encoder {
