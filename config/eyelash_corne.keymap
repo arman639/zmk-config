@@ -182,7 +182,7 @@
             bindings = <
 &trans   &trans     &trans     &trans      &trans     &trans                                &mmv MOVE_UP                     &trans            &kp HOME   &kp UP     &kp END    &kp DELETE  &trans
 &kp ESC  &none      &kp LALT   &kp RSHIFT  &kp LCTRL  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC    &msc SCRL_UP
-&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)  &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans            &kp PG_UP  &kp PG_DN  &kp RET    &trans      &msc SCRL_DOWN
+&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)  &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &select_line      &kp PG_UP  &kp PG_DN  &kp RET    &trans      &msc SCRL_DOWN
                                &trans      &trans     &trans                                                                 &lt 1 UNDERSCORE  &trans     &trans
             >;
 
