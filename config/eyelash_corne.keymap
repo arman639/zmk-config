@@ -1,7 +1,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -163,10 +162,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans   &trans          &trans     &trans      &trans     &trans                                      &mmv MOVE_UP                     &trans            &kp HOME   &kp UP     &kp END    &kp DELETE  &trans
-&kp ESC  &bt BT_CLR_ALL  &kp LALT   &kp RSHIFT  &kp LCTRL  &bt BT_SEL 3                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC    &kp K_SCROLL_UP
-&trans   &kp LC(Z)       &kp LC(X)  &kp LC(C)   &kp LC(V)  &trans        &kp C_MUTE                    &mmv MOVE_DOWN                   &trans            &kp PG_UP  &kp PG_DN  &kp RET    &trans      &kp K_SCROLL_DOWN
-                                    &trans      &trans     &trans                                                                       &lt 1 UNDERSCORE  &trans     &trans
+&trans   &trans     &trans     &trans      &trans     &trans                                &mmv MOVE_UP                     &trans            &kp HOME   &kp UP     &kp END    &kp DELETE  &trans
+&kp ESC  &none      &kp LALT   &kp RSHIFT  &kp LCTRL  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC    &msc SCRL_UP
+&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)  &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans            &kp PG_UP  &kp PG_DN  &kp RET    &trans      &msc SCRL_DOWN
+                               &trans      &trans     &trans                                                                 &lt 1 UNDERSCORE  &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -211,10 +210,10 @@
         mouse_layer {
             display-name = "Mouse";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans                            &mmv MOVE_UP                     &trans  &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans          &trans           &trans  &trans
-                           &trans     &trans     &trans                                                             &trans  &trans          &trans
+&trans  &trans  &trans     &trans     &trans     &trans                            &mmv MOVE_UP                     &trans     &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans                    &mmv MOVE_DOWN                   &mkp RCLK  &trans          &trans          &trans           &trans  &trans
+                           &trans     &trans     &trans                                                             &mkp LCLK  &mkp MCLK       &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
