@@ -85,7 +85,7 @@
             label = "NEW_MACRO";
         };
 
-        alt_2: new_macro {
+        alt_2: alt_2_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -95,7 +95,7 @@
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
-            label = "NEW_MACRO";
+            label = "alt_2_macro";
         };
     };
 
