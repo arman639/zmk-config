@@ -176,10 +176,10 @@
         fn_num_layer {
             display-name = "Fn-Num";
             bindings = <
-&trans            &kp F3  &kp F4        &kp F5         &kp F6      &kp F7                            &mmv MOVE_UP                     &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS   &kp KP_NUMLOCK
-&kp LEFT_SHIFT    &kp F2  &kp F10       &kp F11        &kp F12     &kp F8            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F9           &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp BSPC       &kp KP_CLEAR
-&kp LEFT_CONTROL  &kp F1  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LA(F5)  &kp F9  &trans                    &mmv MOVE_DOWN                   &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE  &kp SCROLLLOCK
-                                        &trans         &trans      &trans                                                             &kp KP_EQUAL     &kp N0     &kp KP_DOT
+&trans            &kp F3  &kp F4    &kp F5    &kp F6      &kp F7                            &mmv MOVE_UP                     &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS   &kp KP_NUMLOCK
+&kp LEFT_SHIFT    &kp F2  &kp F10   &kp F11   &kp F12     &kp F8            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F9           &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp BSPC       &kp KP_CLEAR
+&kp LEFT_CONTROL  &kp F1  &mkp MB4  &mkp MB5  &kp LA(F5)  &kp F9  &trans                    &mmv MOVE_DOWN                   &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE  &kp SCROLLLOCK
+                                    &trans    &trans      &trans                                                             &kp KP_EQUAL     &kp N0     &kp KP_DOT
             >;
 
             sensor-bindings = <&scroll_encoder>;
