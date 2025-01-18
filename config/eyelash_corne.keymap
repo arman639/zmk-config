@@ -65,7 +65,7 @@
         hrm_behavior: hrm_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_BEHAVIOR";
-            bindings = <&kp>, <&mo_hrm>;
+            bindings = <&kp>, <&sk_hrm>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -114,7 +114,7 @@
             label = "alt_2_macro";
         };
 
-        mo_hrm: mo_hrm {
+        sk_hrm: mo_hrm {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -249,7 +249,7 @@
             display-name = "OSL L";
             bindings = <
 &trans         &trans        &trans        &kp PRINTSCREEN  &trans         &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &kp LC(HOME)  &mo_hrm RALT  &mo_hrm RSHIFT   &mo_hrm RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&to 0          &kp LC(HOME)  &sk_hrm RALT  &sk_hrm RSHIFT   &sk_hrm RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
 &kp RC(RSHFT)  &kp LC(END)   &trans        &kp CAPS         &trans         &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
                                            &trans           &trans         &trans                                                                      &trans  &trans          &trans
             >;
@@ -261,7 +261,7 @@
             display-name = "OSL R";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &trans        &trans          &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &mo_hrm RALT  &mo_hrm RSHIFT  &mo_hrm RCTRL  &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &sk_hrm RALT  &sk_hrm RSHIFT  &sk_hrm RCTRL  &trans  &to 0
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans        &trans          &trans         &trans  &trans
                         &trans  &trans  &trans                                                             &trans  &trans        &trans
             >;
