@@ -248,10 +248,10 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans        &trans                   &kp PRINTSCREEN             &trans         &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &kp LC(HOME)  &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHFT  &sk_hrm RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(END)   &trans                   &kp CAPS                    &trans         &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                                      &trans                      &trans         &trans                                                                      &trans  &trans          &trans
+&trans         &trans        &trans                   &kp PRINTSCREEN             &trans                     &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&to 0          &kp LC(HOME)  &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHFT  &hrm_behavior RCTRL RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)  &kp LC(END)   &trans                   &kp CAPS                    &trans                     &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                                      &trans                      &trans                     &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
