@@ -70,12 +70,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <15 16 17>;
+            hold-trigger-on-release;
         };
 
         specific_sk_behavior: specific_sk_behavior {
             compatible = "zmk,behavior-sticky-key";
             label = "SPECIFIC_SK_BEHAVIOR";
-            bindings = <&sl>;
+            bindings = <&kp>;
             #binding-cells = <1>;
             release-after-ms = <200>;
             ignore-modifiers;
