@@ -78,6 +78,7 @@
             #binding-cells = <1>;
             release-after-ms = <200>;
             ignore-modifiers;
+            lazy;
         };
     };
 
