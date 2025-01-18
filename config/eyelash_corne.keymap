@@ -200,10 +200,10 @@
         base_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R                          &kp T                                 &mmv MOVE_UP                     &kp Y       &kp U      &kp I         &kp O    &kp P     &kp GRAVE
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F                          &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H       &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C     &kp V                          &kp B        &none                    &mmv MOVE_DOWN                   &kp N       &kp M      &kp COMMA     &kp DOT  &kp FSLH  &mkp LCLK
-                              &kp LGUI  &layer_tap_release_alttab A 4  &lt 3 SPACE                                                            &sk RSHIFT  &oslr 2 5  &kp LEFT_ALT
+&lt 8 ESCAPE    &kp Q  &kp W  &kp E     &kp R                          &kp T                                 &mmv MOVE_UP                     &kp Y       &kp U      &kp I      &kp O    &kp P     &kp GRAVE
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F                          &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C     &kp V                          &kp B        &none                    &mmv MOVE_DOWN                   &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mkp LCLK
+                              &kp LGUI  &layer_tap_release_alttab A 4  &lt 3 SPACE                                                            &sk RSHIFT  &oslr 2 5  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -248,10 +248,10 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans        &trans                   &kp PRINTSCREEN             &trans                     &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &kp LC(HOME)  &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHFT  &hrm_behavior RCTRL RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(END)   &trans                   &kp CAPS                    &trans                     &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                                      &trans                      &trans                     &trans                                                                      &trans  &trans          &trans
+&trans         &trans        &none                    &to 9                      &none                      &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&to 0          &kp LC(HOME)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)  &kp LC(END)   &none                    &kp CAPS                   &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                                      &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -279,6 +279,24 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        custom_layer {
+            bindings = <
+&none  &kp LA(F4)           &kp LC(W)        &kp F5  &none  &kp INSERT                       &none         &none  &none     &none      &none      &none     &none
+&to 0  &kp LG(PRINTSCREEN)  &kp PRINTSCREEN  &none   &none  &none                     &none  &none  &none  &none  &sk RALT  &sk RSHFT  &sk RCTRL  &sk RGUI  &none
+&none  &none                &none            &none   &none  &kp PAUSE_BREAK  &none           &none         &none  &none     &none      &none      &none     &none
+                                             &none   &none  &none                                          &none  &none     &none
+            >;
+        };
+
+        multimedia_layer {
+            bindings = <
+&none  &none  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &none                  &none         &none  &none  &none  &none  &none  &none
+&none  &none  &none              &none            &none       &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none              &none            &none       &none  &none           &none         &none  &none  &none  &none  &none  &none
+                                 &none            &none       &none                                &none  &none  &none
+            >;
         };
 
         locked_layer {
