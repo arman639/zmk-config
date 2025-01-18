@@ -55,7 +55,7 @@
         layer_tap_release_alttab: layer_tap_release_alttab {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_RELEASE_ALTTAB";
-            bindings = <&momentary_release_alt>, <&sl>;
+            bindings = <&mo_release_alt>, <&sl>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -99,7 +99,7 @@
             label = "NEW_MACRO";
         };
 
-        momentary_release_alt: alt_2_macro {
+        mo_release_alt: alt_2_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
