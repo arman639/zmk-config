@@ -248,7 +248,7 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans        &none                    &to 9                      &none                      &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&trans         &trans        &none                    &sl 7                      &none                      &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
 &to 0          &kp LC(HOME)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
 &kp RC(RSHFT)  &kp LC(END)   &none                    &kp CAPS                   &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
                                                       &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
