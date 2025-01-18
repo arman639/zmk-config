@@ -75,7 +75,7 @@
         specific_sk_behavior: specific_sk_behavior {
             compatible = "zmk,behavior-sticky-key";
             label = "SPECIFIC_SK_BEHAVIOR";
-            bindings = <&kp>;
+            bindings = <&sl>;
             #binding-cells = <1>;
             release-after-ms = <200>;
             ignore-modifiers;
