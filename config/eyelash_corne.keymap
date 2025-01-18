@@ -62,13 +62,14 @@
             tapping-term-ms = <200>;
         };
 
-        hrm_behavior: hrm_behavior {
+        hrm_behavior_left: hrm_behavior_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_BEHAVIOR";
+            label = "HRM_BEHAVIOR_LEFT";
             bindings = <&kp>, <&sk_hrm>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            hold-trigger-key-positions = <15 16 17>;
         };
 
         specific_sk_behavior: specific_sk_behavior {
@@ -258,10 +259,10 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans        &trans                   &kp PRINTSCREEN             &trans                     &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &kp LC(HOME)  &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHFT  &hrm_behavior RCTRL RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(END)   &trans                   &kp CAPS                    &trans                     &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                                      &trans                      &trans                     &trans                                                                      &trans  &trans          &trans
+&trans         &trans        &trans                        &kp PRINTSCREEN                  &trans                          &kp INSERT                                 &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&to 0          &kp LC(HOME)  &hrm_behavior_left RALT RALT  &hrm_behavior_left RSHIFT RSHFT  &hrm_behavior_left RCTRL RCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)  &kp LC(END)   &trans                        &kp CAPS                         &trans                          &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                                           &trans                           &trans                          &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -270,10 +271,10 @@
         ols_r_layer {
             display-name = "OSL R";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &trans                   &trans                      &trans                     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHFT  &hrm_behavior RCTRL RCTRL  &trans  &to 0
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans                   &trans                      &trans                     &trans  &trans
-                        &trans  &trans  &trans                                                             &trans  &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &trans                        &trans                           &trans                          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &hrm_behavior_left RALT RALT  &hrm_behavior_left RSHIFT RSHFT  &hrm_behavior_left RCTRL RCTRL  &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans                        &trans                           &trans                          &trans  &trans
+                        &trans  &trans  &trans                                                             &trans  &trans                        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
