@@ -170,7 +170,7 @@
         unlock_combo {
             bindings = <&to 0>;
             key-positions = <1 5>;
-            layers = <7>;
+            layers = <9>;
         };
 
         lock_combo {
