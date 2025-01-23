@@ -174,7 +174,7 @@
         };
 
         lock_combo {
-            bindings = <&to 7>;
+            bindings = <&to 9>;
             key-positions = <1 5>;
             layers = <0>;
         };
@@ -282,10 +282,10 @@
         ols_r_layer {
             display-name = "OSL R";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &trans                   &trans                       &trans                     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHIFT  &hrm_behavior RCTRL RCTRL  &trans  &to 0
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans                   &trans                       &trans                     &trans  &trans
-                        &trans  &trans  &trans                                                             &trans  &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans      &trans                   &trans                       &trans                     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans      &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHIFT  &hrm_behavior RCTRL RCTRL  &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &kp INSERT  &trans                   &trans                       &trans                     &trans  &trans
+                        &trans  &trans  &trans                                                             &trans      &trans                   &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -305,7 +305,7 @@
 
         custom_layer {
             bindings = <
-&none  &kp LA(F4)       &kp LC(W)      &kp F5    &none                 &kp INSERT                       &none         &none  &none     &none      &none      &none     &none
+&none  &kp LA(F4)       &kp LC(W)      &kp F5    &none                 &kp LC(T)                        &none         &none  &none     &none      &none      &none     &none
 &to 0  &kp PRINTSCREEN  &kp LG(LS(S))  &none     &none                 &none                     &none  &none  &none  &none  &sk RALT  &sk RSHFT  &sk RCTRL  &sk RGUI  &none
 &none  &none            &none          &kp CAPS  &none                 &kp PAUSE_BREAK  &none           &none         &enye  &none     &none      &none      &none     &none
                                        &none     &cancel_custom_layer  &none                                          &none  &none     &none
