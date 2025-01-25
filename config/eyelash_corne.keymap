@@ -70,6 +70,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        comment_ignore_mods: comment_ignore_mods {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMENT_IGNORE_MODS";
+            bindings = <&kp LC(SLASH)>, <&kp LC(SLASH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_LSFT|MOD_RALT|MOD_RSFT)>;
+        };
     };
 
     macros {
