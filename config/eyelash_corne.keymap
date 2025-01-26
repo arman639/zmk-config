@@ -23,12 +23,12 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 &sl {
-    release-after-ms = <2000>;
+    release-after-ms = <5000>;
     ignore-modifiers;
 };
 
 &sk {
-    release-after-ms = <2000>;
+    release-after-ms = <5000>;
     quick-release;
     ignore-modifiers;
 };
