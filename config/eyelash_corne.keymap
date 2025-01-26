@@ -308,7 +308,7 @@
         ols_r_layer {
             display-name = "OSL R";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans      &trans                   &trans                       &trans                     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &sys_reset  &trans                   &trans                       &trans                     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans      &hrm_behavior RALT RALT  &hrm_behavior RSHIFT RSHIFT  &hrm_behavior RCTRL RCTRL  &trans  &to 0
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &kp INSERT  &trans                   &trans                       &trans                     &trans  &trans
                         &trans  &trans  &trans                                                             &trans      &trans                   &trans
