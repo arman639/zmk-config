@@ -329,12 +329,12 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        custom_layer {
+        explorer_layer {
             bindings = <
-&none  &none            &kp LC(W)      &none     &kp LC(PAGE_UP)       &kp LC(T)                        &none         &none  &none     &none      &none      &none     &none
-&to 0  &kp PRINTSCREEN  &kp LG(LS(S))  &none     &kp LC(PAGE_DOWN)     &none                     &none  &none  &none  &none  &sk RALT  &sk RSHFT  &sk RCTRL  &sk RGUI  &none
-&none  &none            &none          &kp CAPS  &none                 &kp PAUSE_BREAK  &none           &none         &enye  &none     &none      &none      &none     &none
-                                       &none     &cancel_custom_layer  &none                                          &none  &none     &none
+&none  &none  &kp LC(W)        &none     &kp LC(PAGE_DOWN)     &kp LC(T)                        &none         &none  &none     &none      &none      &none     &none
+&to 0  &none  &kp LC(PAGE_UP)  &none     &kp LC(PAGE_DOWN)     &none                     &none  &none  &none  &none  &sk RALT  &sk RSHFT  &sk RCTRL  &sk RGUI  &none
+&none  &none  &none            &kp CAPS  &none                 &kp PAUSE_BREAK  &none           &none         &enye  &none     &none      &none      &none     &none
+                               &none     &cancel_custom_layer  &none                                          &none  &none     &none
             >;
         };
 
@@ -358,17 +358,17 @@
 
         windows_layer {
             bindings = <
-&none  &kp LA(F4)  &none  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(UP_ARROW)                  &none         &none  &none  &none  &none  &none  &none
-&none  &none       &none  &none         &none          &none                      &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none       &none  &none         &none          &none             &none           &none         &none  &none  &none  &none  &none  &none
-                          &none         &none          &none                                           &none  &none  &none
+&none  &kp LA(F4)       &none          &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(UP_ARROW)                  &none         &none  &none  &none  &none  &none  &none
+&none  &kp PRINTSCREEN  &kp LG(LS(S))  &none         &none          &none                      &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none            &none          &none         &none          &none             &none           &none         &none  &none  &none  &none  &none  &none
+                                       &none         &none          &none                                           &none  &none  &none
             >;
         };
 
         editor_layer {
             bindings = <
 &trans  &trans  &trans         &trans  &trans         &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(LS(S))  &trans  &kp LC(LS(F))  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none   &kp LC(LS(S))  &trans  &kp LC(LS(F))  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans         &trans  &trans         &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                &trans  &trans         &trans                                    &trans  &trans  &trans
             >;
