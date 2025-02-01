@@ -43,15 +43,6 @@
             bindings = <&mo>, <&sl>;
         };
 
-        hold_kp_tap_tog: hold_kp_tap_tog {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_KP_TAP_TOG";
-            bindings = <&kp>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         layer_tap_release_alttab: layer_tap_release_alttab {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_RELEASE_ALTTAB";
