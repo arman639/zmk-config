@@ -219,11 +219,11 @@
         unlock_combo {
             bindings = <&to 0>;
             key-positions = <1 5>;
-            layers = <9>;
+            layers = <6>;
         };
 
         lock_combo {
-            bindings = <&to 9>;
+            bindings = <&to 6>;
             key-positions = <1 5>;
             layers = <0>;
         };
@@ -271,7 +271,7 @@
         base_layer {
             display-name = "QWERTY";
             bindings = <
-&lt 8 ESCAPE    &kp Q  &kp W  &kp E     &kp R                          &kp T                                 &mmv MOVE_UP                     &kp Y       &kp U      &kp I      &kp O    &kp P     &kp GRAVE
+&lt 9 ESCAPE    &kp Q  &kp W  &kp E     &kp R                          &kp T                                 &mmv MOVE_UP                     &kp Y       &kp U      &kp I      &kp O    &kp P     &kp GRAVE
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F                          &kp G                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C     &kp V                          &kp B        &none                    &mmv MOVE_DOWN                   &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mkp LCLK
                               &kp LGUI  &layer_tap_release_alttab A 4  &lt 3 SPACE                                                            &sk RSHIFT  &oslr 2 5  &kp RALT
@@ -319,7 +319,7 @@
         osl_l_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans                                                    &sl 10                   &sl 7                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&trans         &trans                                                    &sl 10                   &sl 8                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
 &to 0          &hrm_noignore_behavior LS(LEFT_CONTROL) LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
 &kp RC(RSHFT)  &kp LC(HOME)                                              &kp LC(END)              &none                      &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
                                                                                                   &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
@@ -338,6 +338,15 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        locked_layer {
+            bindings = <
+&none  &none  &none  &none  &none  &none                  &none         &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
+                     &none  &none  &none                                &none  &none  &none
+            >;
         };
 
         mouse_layer {
@@ -370,15 +379,6 @@
             >;
         };
 
-        locked_layer {
-            bindings = <
-&none  &none  &none  &none  &none  &none                  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
-                     &none  &none  &none                                &none  &none  &none
-            >;
-        };
-
         windows_layer {
             bindings = <
 &none  &kp LA(F4)       &none          &kp LG(LEFT)  &kp LG(RIGHT_ARROW)  &kp LG(UP_ARROW)                   &none         &none  &none  &none  &none  &none  &none
@@ -394,7 +394,7 @@
 
         mouselayer {
             if-layers = <2 1>;
-            then-layer = <6>;
+            then-layer = <7>;
         };
     };
 };
