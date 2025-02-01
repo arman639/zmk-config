@@ -102,16 +102,7 @@
         hrm_noignore_behavior: hrm_noignore_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_NOIGNORE_BEHAVIOR";
-            bindings = <&sk_noignore>, <&sk_noignore>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        holdtap_mo_to_behavior: holdtap_mo_to_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTAP_MO_TO_BEHAVIOR";
-            bindings = <&mo>, <&to>;
+            bindings = <&sk_noignore>, <&sk_hrm_noignore>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
