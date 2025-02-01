@@ -107,6 +107,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        holdtap_mo_to_behavior: holdtap_mo_to_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAP_MO_TO_BEHAVIOR";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -315,10 +324,10 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans                                                    &sl 10                   &sl 7                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &hrm_noignore_behavior LS(LEFT_CONTROL) LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(HOME)                                              &kp LC(END)              &none                      &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                                                                                  &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
+&trans                        &trans                                                    &sl 10                   &sl 7                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&holdtap_mo_to_behavior 10 0  &hrm_noignore_behavior LS(LEFT_CONTROL) LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)                 &kp LC(HOME)                                              &kp LC(END)              &none                      &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                                                                                                 &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -377,10 +386,10 @@
 
         windows_layer {
             bindings = <
-&none  &kp LA(F4)       &none          &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(UP_ARROW)                   &none         &none  &none  &none  &none  &none  &none
-&none  &kp PRINTSCREEN  &kp LG(LS(S))  &none         &none          &kp LG(LS(RIGHT))           &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none            &none          &none         &none          &none              &none           &none         &none  &none  &none  &none  &none  &none
-                                       &none         &none          &none                                            &none  &none  &none
+&none  &kp LA(F4)       &none          &kp LG(UP_ARROW)    &none          &none                  &none         &none  &none  &none  &none  &none  &none
+&none  &kp PRINTSCREEN  &kp LG(LS(S))  &kp LG(DOWN_ARROW)  &kp LG(RIGHT)  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none            &none          &none               &none          &none  &none           &none         &none  &none  &none  &none  &none  &none
+                                       &none               &none          &none                                &none  &none  &none
             >;
         };
     };
