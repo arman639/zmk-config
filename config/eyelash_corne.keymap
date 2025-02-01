@@ -316,7 +316,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        osl_layer {
+        osl_l_layer {
             display-name = "OSL L";
             bindings = <
 &trans         &trans                                                    &sl 10                   &sl 7                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
