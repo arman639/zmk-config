@@ -55,7 +55,7 @@
         layer_tap_release_alttab: layer_tap_release_alttab {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_RELEASE_ALTTAB";
-            bindings = <&mo_release_alt>, <&sl>;
+            bindings = <&mo_release_alt_macro>, <&sl>;
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
@@ -65,7 +65,7 @@
         hrm_behavior: hrm_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_BEHAVIOR";
-            bindings = <&sk>, <&sk_hrm>;
+            bindings = <&sk>, <&sk_hrm_macro>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -102,7 +102,7 @@
         hrm_noignore_behavior: hrm_noignore_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_NOIGNORE_BEHAVIOR";
-            bindings = <&sk_noignore>, <&sk_hrm_noignore>;
+            bindings = <&sk_noignore>, <&sk_hrm_noignore_macro>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -110,7 +110,7 @@
     };
 
     macros {
-        super_alttab: super_alttab {
+        super_alttab_macro: super_alttab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -120,7 +120,7 @@
                 <&kp TAB &to 2>;
         };
 
-        select_line: new_macro {
+        select_line_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -136,7 +136,7 @@
             label = "NEW_MACRO";
         };
 
-        mo_release_alt: alt_2_macro {
+        mo_release_alt_macro: alt_2_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -151,7 +151,7 @@
             label = "alt_2_macro";
         };
 
-        sk_hrm: mo_hrm {
+        sk_hrm_macro: mo_hrm {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -164,7 +164,7 @@
             label = "MO_HRM";
         };
 
-        cancel_custom_layer: cancel_custom_activation {
+        cancel_custom_layer_macro: cancel_custom_activation {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&to 0>, <&macro_tap>, <&sl 4>;
@@ -172,7 +172,7 @@
             label = "CANCEL_CUSTOM_ACTIVATION";
         };
 
-        enye: enye {
+        enye_macro: enye {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -186,7 +186,7 @@
             label = "ENYE";
         };
 
-        to_base_and_escape: to_base_and_escape {
+        to_base_and_escape_macro: to_base_and_escape {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&to 0 &kp ESCAPE>;
@@ -194,7 +194,7 @@
             label = "TO_BASE_AND_ESCAPE";
         };
 
-        sk_hrm_noignore: sk_hrm_noignore {
+        sk_hrm_noignore_macro: sk_hrm_noignore {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -292,10 +292,10 @@
         sym_layer {
             display-name = "SYMBOL";
             bindings = <
-&super_alttab     &kp N1         &kp N2            &kp N3             &kp N4    &kp N5                                   &mmv MOVE_UP                     &kp N6     &kp N7            &kp N8     &kp N9          &kp N0           &trans
-&esc_ignore_mods  &kp EXCL       &kp AT            &kp HASH           &kp DLLR  &kp PRCNT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPS          &kp ASTRK  &kp LPAR        &kp RPAR         &kp TILDE
-&trans            &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE  &super_alttab  &trans                    &mmv MOVE_DOWN                   &kp PLUS   &kp MINUS         &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
-                                                   &trans             &trans    &kp SPACE                                                                 &trans     &lt 2 UNDERSCORE  &trans
+&super_alttab_macro  &kp N1         &kp N2            &kp N3             &kp N4    &kp N5                                         &mmv MOVE_UP                     &kp N6     &kp N7            &kp N8     &kp N9          &kp N0           &trans
+&esc_ignore_mods     &kp EXCL       &kp AT            &kp HASH           &kp DLLR  &kp PRCNT                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPS          &kp ASTRK  &kp LPAR        &kp RPAR         &kp TILDE
+&trans               &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE  &super_alttab_macro  &trans                    &mmv MOVE_DOWN                   &kp PLUS   &kp MINUS         &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+                                                      &trans             &trans    &kp SPACE                                                                       &trans     &lt 2 UNDERSCORE  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -304,10 +304,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&kp TAB     &trans        &trans              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)         &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
-&kp ESCAPE  &kp LEFT_GUI  &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB           &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
-&trans      &kp LC(Z)     &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB    &kp C_MUTE                    &mmv MOVE_DOWN                   &select_line      &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
-                                              &trans      &trans     &trans                                                                    &lt 1 UNDERSCORE  &trans     &trans
+&kp TAB     &trans        &trans              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
+&kp ESCAPE  &kp LEFT_GUI  &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
+&trans      &kp LC(Z)     &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB    &kp C_MUTE                    &mmv MOVE_DOWN                   &select_line_macro  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
+                                              &trans      &trans     &trans                                                                    &lt 1 UNDERSCORE    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -363,10 +363,10 @@
 
         explorer_layer {
             bindings = <
-&none  &none  &kp LC(W)        &none     &kp LC(PAGE_DOWN)     &kp LC(T)                        &none         &none  &none     &none      &none      &none     &none
-&to 0  &none  &kp LC(PAGE_UP)  &none     &kp LC(PAGE_DOWN)     &none                     &none  &none  &none  &none  &sk RALT  &sk RSHFT  &sk RCTRL  &sk RGUI  &none
-&none  &none  &none            &kp CAPS  &none                 &kp PAUSE_BREAK  &none           &none         &enye  &none     &none      &none      &none     &none
-                               &none     &cancel_custom_layer  &none                                          &none  &none     &none
+&none  &none  &kp LC(W)        &none     &kp LC(PAGE_DOWN)           &kp LC(T)                        &none         &none        &none     &none      &none      &none     &none
+&to 0  &none  &kp LC(PAGE_UP)  &none     &kp LC(PAGE_DOWN)           &none                     &none  &none  &none  &none        &sk RALT  &sk RSHFT  &sk RCTRL  &sk RGUI  &none
+&none  &none  &none            &kp CAPS  &none                       &kp PAUSE_BREAK  &none           &none         &enye_macro  &none     &none      &none      &none     &none
+                               &none     &cancel_custom_layer_macro  &none                                          &none        &none     &none
             >;
         };
 
