@@ -88,6 +88,25 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
+
+        sk_noignore: sk_noignore {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_NOIGNORE";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <5000>;
+            lazy;
+            quick-release;
+        };
+
+        hrm_noignore_behavior: hrm_noignore_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_NOIGNORE_BEHAVIOR";
+            bindings = <&sk_noignore>, <&sk_noignore>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -296,10 +315,10 @@
         osl_layer {
             display-name = "OSL L";
             bindings = <
-&trans         &trans                                           &sl 10                   &sl 7                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &hrm_behavior LS(LEFT_CONTROL) LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
-&kp RC(RSHFT)  &kp LC(HOME)                                     &kp LC(END)              &none                      &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
-                                                                                         &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
+&trans         &trans                                                    &sl 10                   &sl 7                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
+&to 0          &hrm_noignore_behavior LS(LEFT_CONTROL) LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&kp RC(RSHFT)  &kp LC(HOME)                                              &kp LC(END)              &none                      &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
+                                                                                                  &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
