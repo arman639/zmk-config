@@ -93,7 +93,7 @@
         super_arrow_behavior: super_arrow_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "SUPER_ARROW_BEHAVIOR";
-            bindings = <&kp>, <&move_arrow_10_macro>;
+            bindings = <&kp>, <&move_arrow_20_macro>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -102,7 +102,7 @@
         super_arrow_x2_behavior: super_arrow_x2_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "SUPER_ARROW_X2_BEHAVIOR";
-            bindings = <&kp>, <&move_arrow_20_macro>;
+            bindings = <&kp>, <&move_arrow_10_macro>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -227,7 +227,7 @@
             label = "DELETE_LINE_MACRO";
         };
 
-        move_arrow_20_macro: move_arrow_20_macro {
+        move_arrow_10_macro: move_arrow_20_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -239,7 +239,7 @@
             tap-ms = <5>;
         };
 
-        move_arrow_10_macro: move_arrow_10_macro {
+        move_arrow_20_macro: move_arrow_10_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
