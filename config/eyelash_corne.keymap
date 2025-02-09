@@ -89,16 +89,6 @@
             lazy;
             quick-release;
         };
-
-        move_10_lines_behavior: move_10_lines_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOVE_10_LINES_BEHAVIOR";
-            bindings = <&move_down_10_macro>, <&move_up_10_macro>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     macros {
@@ -219,24 +209,12 @@
             label = "DELETE_LINE_MACRO";
         };
 
-        move_down_10_macro: move_10_lines_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        move_arrow_10_macro: move_up_10_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
-
-            label = "MOVE_10_LINES_MACRO";
-            tap-ms = <5>;
-            wait-ms = <5>;
-        };
-
-        move_up_10_macro: move_up_10_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "MOVE_UP_10_MACRO";
             wait-ms = <5>;
@@ -340,10 +318,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&kp TAB     &trans        &trans              &kp LG(T)   &trans     &trans                                            &mmv MOVE_UP                     &kp LC(Y)                &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
-&kp ESCAPE  &kp LEFT_GUI  &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &delete_line_macro                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB                  &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
-&trans      &kp LC(Z)     &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB             &kp C_MUTE                    &mmv MOVE_DOWN                   &move_10_lines_behavior  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
-                                              &trans      &trans     &trans                                                                             &lt 1 UNDERSCORE         &trans     &trans
+&kp TAB       &trans     &trans              &kp LG(T)   &trans     &trans                                 &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
+&kp ESCAPE    &mo 11     &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &none                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
+&kp LEFT_GUI  &kp LC(Z)  &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB  &kp C_MUTE                    &mmv MOVE_DOWN                   &delete_line_macro  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
+                                             &trans      &trans     &trans                                                                  &lt 1 UNDERSCORE    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -430,6 +408,15 @@
 &none  &kp PRINTSCREEN  &kp LG(LS(S))  &none         &none                &kp LG(LS(RIGHT))           &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none            &none          &none         &none                &none              &none           &none         &none  &none  &none  &none  &none  &none
                                        &none         &none                &none                                            &none  &none  &none
+            >;
+        };
+
+        super_nav_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans                           &move_arrow_10_macro UP_ARROW    &trans                            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &move_arrow_10_macro LEFT_ARROW  &move_arrow_10_macro DOWN_ARROW  &move_arrow_10_macro RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans                           &trans                           &trans                            &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans                           &trans
             >;
         };
     };
