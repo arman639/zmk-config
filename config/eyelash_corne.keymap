@@ -227,6 +227,8 @@
                 <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
 
             label = "MOVE_10_LINES_MACRO";
+            tap-ms = <5>;
+            wait-ms = <5>;
         };
 
         move_up_10_macro: move_up_10_macro {
@@ -237,6 +239,8 @@
                 <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
 
             label = "MOVE_UP_10_MACRO";
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
     };
 
