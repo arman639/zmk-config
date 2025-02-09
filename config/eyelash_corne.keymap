@@ -231,7 +231,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat>;
 
             label = "MOVE_ARROW_20_MACRO";
@@ -243,7 +243,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat>;
 
             label = "MOVE_ARROW_10_MACRO";
