@@ -93,7 +93,7 @@
         move_10_lines_behavior: move_10_lines_behavior {
             compatible = "zmk,behavior-mod-morph";
             label = "MOVE_10_LINES_BEHAVIOR";
-            bindings = <&move_up_10_macro>, <&move_down_10_macro>;
+            bindings = <&move_down_10_macro>, <&move_up_10_macro>;
 
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_LCTL)>;
@@ -224,7 +224,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp DOWN_ARROW &kp DOWN &kp DOWN &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+                <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
 
             label = "MOVE_10_LINES_MACRO";
         };
