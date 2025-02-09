@@ -89,6 +89,15 @@
             lazy;
             quick-release;
         };
+
+        super_arrow_behavior: super_arrow_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SUPER_ARROW_BEHAVIOR";
+            bindings = <&kp>, <&move_arrow_10_macro>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -217,6 +226,18 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "MOVE_UP_10_MACRO";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
+
+        move_arrow_5_macro: move_arrow_5_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MOVE_ARROW_5_MACRO";
             wait-ms = <5>;
             tap-ms = <5>;
         };
@@ -413,10 +434,10 @@
 
         super_nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans                           &move_arrow_10_macro UP_ARROW    &trans                            &trans              &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &move_arrow_10_macro LEFT_ARROW  &move_arrow_10_macro DOWN_ARROW  &move_arrow_10_macro RIGHT_ARROW  &delete_line_macro  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans                           &trans                           &trans                            &trans              &trans
-                        &trans  &trans  &trans                                    &trans  &trans                           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans                                       &super_arrow_behavior UP_ARROW UP_ARROW      &trans                                         &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &super_arrow_behavior LEFT_ARROW LEFT_ARROW  &super_arrow_behavior DOWN_ARROW DOWN_ARROW  &super_arrow_behavior RIGHT_ARROW RIGHT_ARROW  &delete_line_macro  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans                                       &trans                                       &trans                                         &trans              &trans
+                        &trans  &trans  &trans                                    &trans  &trans                                       &trans
             >;
         };
     };
