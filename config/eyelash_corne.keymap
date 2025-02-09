@@ -247,8 +247,8 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat>;
 
             label = "MOVE_ARROW_10_MACRO";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <0.1>;
+            tap-ms = <0.1>;
         };
     };
 
