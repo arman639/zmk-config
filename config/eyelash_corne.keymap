@@ -348,10 +348,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans        &trans     &trans              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
-&kp ESCAPE    &mo 11     &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
-&kp LEFT_GUI  &kp LC(Z)  &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB    &kp C_MUTE                    &mmv MOVE_DOWN                   &delete_line_macro  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
-                                             &trans      &trans     &trans                                                                    &lt 1 UNDERSCORE    &trans     &trans
+&trans      &trans     &trans              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
+&kp ESCAPE  &mo 11     &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
+&trans      &kp LC(Z)  &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB    &kp C_MUTE                    &mmv MOVE_DOWN                   &delete_line_macro  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
+                                           &trans      &trans     &trans                                                                    &lt 1 UNDERSCORE    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
