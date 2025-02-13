@@ -369,7 +369,7 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans      &trans     &mo 12              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
+&trans      &none      &none               &mo 12      &none      &none                                    &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &none
 &kp ESCAPE  &mo 13     &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
 &trans      &kp LC(Z)  &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB    &kp C_MUTE                    &mmv MOVE_DOWN                   &delete_line_macro  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
                                            &trans      &mo 11     &trans                                                                    &lt 1 UNDERSCORE    &trans     &trans
