@@ -256,8 +256,8 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat>;
 
             label = "MOVE_ARROW_10_MACRO";
-            wait-ms = <15>;
-            tap-ms = <15>;
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
 
         move_arrow_5_macro: move_arrow_5_macro {
