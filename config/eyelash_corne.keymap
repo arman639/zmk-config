@@ -107,6 +107,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        super_arrow_xhalf_behavior: super_arrow_xhalf_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SUPER_ARROW_XHALF_BEHAVIOR";
+            bindings = <&kp>, <&move_arrow_20_macro>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -250,6 +259,18 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        move_arrow_5_macro: move_arrow_5_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat>;
+
+            label = "MOVE_ARROW_5_MACRO";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -348,10 +369,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans      &trans     &trans              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
-&kp ESCAPE  &mo 11     &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
+&trans      &trans     &mo 12              &trans      &trans     &trans                                   &mmv MOVE_UP                     &kp LC(Y)           &kp HOME   &kp UP     &kp END    &kp DELETE            &trans
+&kp ESCAPE  &mo 13     &mt LALT LC(LS(S))  &kp RSHIFT  &kp LCTRL  &kp LG(T)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp TAB             &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC              &msc SCRL_UP
 &trans      &kp LC(Z)  &kp LC(X)           &kp LC(C)   &kp LC(V)  &kp TAB    &kp C_MUTE                    &mmv MOVE_DOWN                   &delete_line_macro  &kp PG_UP  &kp PG_DN  &kp RET    &comment_ignore_mods  &msc SCRL_DOWN
-                                           &trans      &trans     &trans                                                                    &lt 1 UNDERSCORE    &trans     &trans
+                                           &trans      &mo 11     &trans                                                                    &lt 1 UNDERSCORE    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -441,11 +462,29 @@
             >;
         };
 
-        super_nav_layer {
+        super_nav10_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans                                          &super_arrow_behavior UP_ARROW UP_ARROW      &trans                                            &trans              &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &super_arrow_x2_behavior LEFT_ARROW LEFT_ARROW  &super_arrow_behavior DOWN_ARROW DOWN_ARROW  &super_arrow_x2_behavior RIGHT_ARROW RIGHT_ARROW  &delete_line_macro  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans                                          &trans                                       &trans                                            &trans              &trans
+                        &trans  &trans  &trans                                    &trans  &trans                                          &trans
+            >;
+        };
+
+        super_nav20_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans                                          &super_arrow_x2_behavior UP_ARROW UP_ARROW      &trans                                            &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &super_arrow_x2_behavior LEFT_ARROW LEFT_ARROW  &super_arrow_x2_behavior DOWN_ARROW DOWN_ARROW  &super_arrow_x2_behavior RIGHT_ARROW RIGHT_ARROW  &delete_line_macro  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans                                          &trans                                          &trans                                            &trans              &trans
+                        &trans  &trans  &trans                                    &trans  &trans                                          &trans
+            >;
+        };
+
+        super_nav5_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans                                          &super_arrow_xhalf_behavior UP_ARROW UP_ARROW      &trans                                            &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &super_arrow_x2_behavior LEFT_ARROW LEFT_ARROW  &super_arrow_xhalf_behavior DOWN_ARROW DOWN_ARROW  &super_arrow_x2_behavior RIGHT_ARROW RIGHT_ARROW  &delete_line_macro  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans                                          &trans                                             &trans                                            &trans              &trans
                         &trans  &trans  &trans                                    &trans  &trans                                          &trans
             >;
         };
