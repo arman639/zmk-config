@@ -488,6 +488,15 @@
                         &trans  &trans  &trans                                    &trans  &trans                                          &trans
             >;
         };
+
+        Toggle_Layer {
+            bindings = <
+&trans  &trans  &trans          &trans        &trans  &trans                    &trans          &trans  &trans          &kp INSERT  &trans  &trans  &trans
+&trans  &trans  &kp SCROLLLOCK  &trans        &trans  &trans            &trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans  &trans
+&trans  &trans  &trans          &kp CAPSLOCK  &trans  &trans  &trans            &trans          &trans  &kp KP_NUMLOCK  &trans      &trans  &trans  &trans
+                                &trans        &trans  &trans                                    &trans  &trans          &trans
+            >;
+        };
     };
 
     conditional_layers {
