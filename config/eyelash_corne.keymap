@@ -392,7 +392,7 @@
             display-name = "OSL L";
             bindings = <
 &trans         &trans                            &sl 10                   &sl 8                      &trans                     &none                                      &mmv MOVE_UP                     &trans  &studio_unlock  &trans  &trans  &trans  &trans
-&to 0          &hrm_hold_macro LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &trans                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
+&to 0          &hrm_hold_macro LS(LEFT_CONTROL)  &hrm_behavior LALT LALT  &hrm_behavior LSHFT LSHFT  &hrm_behavior LCTRL LCTRL  &sl 14                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans          &trans  &trans  &trans  &trans
 &kp RC(RSHFT)  &kp LC(HOME)                      &kp LC(END)              &none                      &none                      &kp PAUSE_BREAK  &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans  &trans  &trans  &trans
                                                                           &trans                     &trans                     &trans                                                                      &trans  &trans          &trans
             >;
@@ -496,6 +496,8 @@
 &trans  &trans  &trans          &kp CAPSLOCK  &trans  &trans  &trans            &trans          &trans  &kp KP_NUMLOCK  &trans      &trans  &trans  &trans
                                 &trans        &trans  &trans                                    &trans  &trans          &trans
             >;
+
+            label = "Toggle_Layer";
         };
     };
 
